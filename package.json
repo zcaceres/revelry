@@ -1,0 +1,15 @@
+{
+  "name": "alert-bot",
+  "version": "1.0.0",
+  "description": "An API for playing sounds",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "@zachcaceres",
+  "license": "MIT",
+  "dependencies": {
+    "afplay": "^1.0.3",
+    "express": "^4.16.3"
+  }
+}
