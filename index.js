@@ -1,25 +1,17 @@
 const express = require('express');
 const app = express();
-const playSound = require('./player');
+const musicRouter = require('./routers/music');
+const unrealRouter = require('./routers/unreal');
+const { listDirectory } = require('./utils');
 
 app.get('/', function(req, res) {
-  res.json({});
-});
+  listDirectory()
+    .then((contents) => res.json(contents))
+    .catch(err => res.sendStatus(err));
+})
 
-app.use(function(req, res, next) {
-  const routeName = req.url.replace('/', '');
-  playSound(routeName);
-  res.send(200);
-});
+app.use('/music', musicRouter);
 
-// app.get('/gangsta', function (req, res) {
-//   res.send(200);
-//   playSound('gangsta');
-// })
-//
-// app.get('/careless', function (req, res) {
-//   res.send(200);
-//   playSound('careless');
-// });
+app.use('/unreal', unrealRouter);
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(3000, () => console.log('Listening :3000!'))
