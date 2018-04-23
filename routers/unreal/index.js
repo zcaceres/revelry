@@ -10,7 +10,7 @@ unreal.get('/', function(req, res) {
 
 unreal.use(function(req, res, next) {
   return playSound(req.originalUrl)
-    .then(() => res.sendStatus('Sound played!'))
+    .then(() => res.send('Sound played!'))
     .catch(e => res.sendStatus(400));
 });
 
