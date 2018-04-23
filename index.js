@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const musicRouter = require('./routers/music');
 const unrealRouter = require('./routers/unreal');
+const marioRouter = require('./routers/mario');
+const miscRouter = require('./routers/misc');
 const { listDirectory } = require('./utils');
 
 app.get('/', function(req, res) {
