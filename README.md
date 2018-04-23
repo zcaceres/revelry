@@ -1,4 +1,4 @@
-# Revere
+# Gilfoyle's Revelry
 ### Play Sounds When Stuff Happens
 
 [Inspired by Gilfoyle's Napalm Death Bitcoin alert...](https://www.youtube.com/watch?v=ybGOT4d2Hs8)
