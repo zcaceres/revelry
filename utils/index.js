@@ -20,8 +20,8 @@ module.exports.pathToFile = (requestedSound) => {
   });
 };
 
-module.exports.listDirectory = (subdir = '') => {
-  return getFileNamesFromDir(path.resolve(`sounds${subdir}`));
+module.exports.listDirectory = (targetDir = '') => {
+  return getFileNamesFromDir(path.resolve(targetDir));
 }
 
 /**
