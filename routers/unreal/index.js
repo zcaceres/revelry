@@ -1,17 +1,8 @@
 const unreal = require('express').Router();
-const playSound = require('../../player');
-const { listDirectory } = require('../../utils');
+const { listFiles, urlToSound } = require('../../build');
 
-unreal.get('/', function(req, res) {
-  listDirectory(req.originalUrl)
-    .then((contents) => res.json(contents))
-    .catch(err => res.sendStatus(err));
-})
+unreal.get('/', listFiles);
 
-unreal.use(function(req, res, next) {
-  return playSound(req.originalUrl)
-    .then(() => res.send('Sound played!'))
-    .catch(e => res.sendStatus(400));
-});
+unreal.use(urlToSound);
 
 module.exports = unreal;

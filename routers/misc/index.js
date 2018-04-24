@@ -1,17 +1,8 @@
 const misc = require('express').Router();
-const playSound = require('../../player');
-const { listDirectory } = require('../../utils');
+const { listFiles, urlToSound } = require('../../build');
 
-misc.get('/', function(req, res) {
-  listDirectory(req.originalUrl)
-    .then((contents) => res.json(contents))
-    .catch(err => res.sendStatus(err));
-})
+misc.get('/', listFiles)
 
-misc.use(function(req, res, next) {
-  return playSound(req.originalUrl)
-    .then(() => res.send('Sound played!'))
-    .catch(e => res.sendStatus(400));
-});
+misc.use(urlToSound);
 
 module.exports = misc;
