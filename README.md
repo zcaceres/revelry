@@ -1,9 +1,9 @@
 # :loudspeaker: Revelry :loudspeaker:
-### Automatic REST API for your Sound Files
+### Automatic API for your Sound Files
 
 [Inspired by Gilfoyle's Napalm Death Bitcoin alert...](https://www.youtube.com/watch?v=ybGOT4d2Hs8) :metal:
 
-Revelry is a simple app that wraps your sound files with a RESTful API. You can then call the API to play the sound. Revelry assumes your server has a speaker (i.e. your server is a wifi-enabled Arduino or your old laptop!).
+Revelry is a simple app that wraps your sound files with a REST-style API. You can then call the API to play the sound. Revelry assumes your server has a speaker (i.e. your server is a wifi-enabled Arduino or your old laptop!).
 
 Use cases include:
 1. An audio notification system for webhooks :alarm_clock:
