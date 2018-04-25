@@ -7,10 +7,10 @@ Revelry is a simple app that wraps your sound files with a RESTful API. You can 
 
 Use cases include:
 1. An audio notification system for webhooks
-2. Trolling your friends with a hidden speaker controlled remotely
+2. Trolling your friends with a hidden speaker that you control with your cell phone
 3. A Jukebox controlled by raw HTTP requests
 
-
+The REST api mirrors the file structure of your /sounds directory. Some sample sounds are included (Unreal Tournament, George Michael, Eye of the Tiger...)
 
 > PRs and additional sounds welcome!
 
@@ -18,6 +18,18 @@ Use cases include:
 1. Clone repo
 2. ```npm i```
 3. ```nvm use``` (Or manually switch to Node 8.9);
-3. ```npm start``` to launch the server
-4. Send requests to ```localhost:3000/your-preferred-endpoint```
+4. Drop sounds into subdirectories of the `sounds` folder
+3. ```npm start``` to launch
+4. Send requests to ```localhost:3000/subdirectory-name-here/filename-here```
 5. Explore sound options from ```localhost:3000```
+
+### How to Easily Make Your Server Public
+Download and set up `ngrok`.
+
+From inside your Revelry project folder...
+```
+npm start
+ngrok http 3000
+```
+
+You're live!
