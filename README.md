@@ -1,14 +1,14 @@
-# Revelry
-### An Automatic REST API for your Sound Files
+# :loudspeaker: Revelry :loudspeaker:
+### Automatic REST API for your Sound Files
 
-[Inspired by Gilfoyle's Napalm Death Bitcoin alert...](https://www.youtube.com/watch?v=ybGOT4d2Hs8)
+[Inspired by Gilfoyle's Napalm Death Bitcoin alert...](https://www.youtube.com/watch?v=ybGOT4d2Hs8) :metal:
 
 Revelry is a simple app that wraps your sound files with a RESTful API. You can then call the API to play the sound. Revelry assumes your server has a speaker (i.e. your server is a wifi-enabled Arduino or your old laptop!).
 
 Use cases include:
-1. An audio notification system for webhooks
-2. Trolling your friends with a hidden speaker that you control with your cell phone
-3. A Jukebox controlled by raw HTTP requests
+1. An audio notification system for webhooks :alarm_clock:
+2. Trolling your friends with a hidden speaker that you control with your cell phone :smiling_imp:
+3. A Jukebox controlled by raw HTTP requests :musical_note:
 
 The REST api mirrors the file structure of your /sounds directory. Some sample sounds are included (Unreal Tournament, George Michael, Eye of the Tiger...)
 
@@ -32,4 +32,4 @@ npm start
 ngrok http 3000
 ```
 
-You're live!
+You're live! :clap:
