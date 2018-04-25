@@ -3,7 +3,7 @@
 
 [Inspired by Gilfoyle's Napalm Death Bitcoin alert...](https://www.youtube.com/watch?v=ybGOT4d2Hs8) :metal:
 
-Revelry is a simple app that wraps your sound files with a REST-style API. You can then call the API to play the sound. Revelry assumes your server has a speaker (i.e. your server is a wifi-enabled Arduino or your old laptop!).
+Revelry is a simple app that wraps your sound files with a REST-style API. You can then call the API to play sounds. Revelry assumes your server has a speaker (i.e. your server is a wifi-enabled Arduino or your old laptop!).
 
 Use cases include:
 1. An audio notification system for webhooks :alarm_clock:
@@ -18,7 +18,7 @@ The REST api mirrors the file structure of your /sounds directory. Some sample s
 1. Clone repo
 2. ```npm i```
 3. ```nvm use``` (Or manually switch to Node 8.9);
-4. Drop sounds into subdirectories of the `sounds` folder
+4. Drop sounds into subdirectories of the `sounds` folder. You can create any directories you want, but Revelry currently supports only one layer deep.
 3. ```npm start``` to launch
 4. Send requests to ```localhost:3000/subdirectory-name-here/filename-here```
 5. Explore sound options from ```localhost:3000```
