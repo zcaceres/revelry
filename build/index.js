@@ -27,7 +27,6 @@ async function sendFileList(req, res, next) {
  */
 async function urlToSound(req, res) {
   try {
-    console.log(req);
     const requestedFile = req.originalUrl;
     await playSound(requestedFile);
     const contents = await listDirectory('sounds' + req.baseUrl);
